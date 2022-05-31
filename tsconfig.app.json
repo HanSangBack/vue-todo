@@ -7,6 +7,23 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "target": "ESNext",
+    "strict": false,
+//    strict 에 포함 되어 있음
+//    alwaysStrict                  // 각 소스에 use strict 적용
+//    strictNullChecks              // null 체크
+//    strictBindCallApply           // 올바른 타입의 인수를 호출하는지 체크
+//    strictFunctionTypes           // 변수에 void둥 맞지 않는 값을 변수로 가질 경우 체크
+//    strictPropertyInitialization  // 클래스 속성에 선언되었으나 생성자에서 사용하지 않는 경우 체크
+//    noImplicitAny                 // any 처리 체크
+//    noImplicitThis                // this에 암시적인 any 형식을 사용 체크
+//    useUnknownInCatchVariables
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": false,
+//    맨아래부터 true로 변경하면서 체크
+//    순서 strictBindCallApply -> strictFunctionTypes -> strictNullChecks -> strict
+//    최종적으로 strict를 true로 변환하면 아래 3개에 대해 전부 포함되어 있기에 아래 3개 삭제 처리 가능
   }
 }
